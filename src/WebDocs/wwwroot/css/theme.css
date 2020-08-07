@@ -1,0 +1,107 @@
+body {
+  color: black;
+  background-color: white;
+  font: 14px 'Open Sans', sans-serif;
+  text-rendering: optimizeLegibility;
+  text-rendering: geometricPrecision;
+  font-smooth: always;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+.dSectorWindows {
+  position: absolute;
+  z-index: 9999;
+}
+.dSectorHeader {
+  position: relative;
+  z-index: 1;
+  min-height: 50px;
+}
+.dSectorMenu {
+  position: relative;
+}
+.dSectorContent {
+  position: relative;
+}
+.dSectorFooter {
+  position: relative;
+}
+.dCloak {
+  display: none;
+}
+.dMenu > div {
+  padding: 0;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+}
+.dMenuTab > span {
+  padding-left: 15px;
+}
+.dMenuGroupExpanded::before {
+  content: "-";
+}
+.dMenuGroupCollapsed::before {
+  content: "+";
+}
+.dMenuGroupNone::before {
+  content: ">";
+}
+.dHeaderImage {
+  width: 30px;
+  height: 30px;
+}
+.dSampleGreen {
+  background-color: green;
+}
+.dSampleRed {
+  background-color: red;
+}
+.dContentLink {
+  text-decoration: underline;
+}
+.dContentLink:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
+.dFunctionParametersTable {
+  color: #333;
+  font-family: Helvetica, Arial, sans-serif;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.dFunctionParametersTable td,
+.dFunctionParametersTable th {
+  border: 1px solid transparent;
+  height: 30px;
+  transition: all 0.3s;
+}
+.dFunctionParametersTable th {
+  background: #DFDFDF;
+  font-weight: bold;
+}
+.dFunctionParametersTable td {
+  background: #FAFAFA;
+}
+.dFunctionParametersTable tr:nth-child(even) td {
+  background: #F1F1F1;
+}
+.dFunctionParametersTable tr:nth-child(odd) td {
+  background: #FEFEFE;
+}
+.ppValidationMessage {
+  color: red;
+}
+.ppValidatorValid {
+  display: none;
+}
+.ppValidationUnchecked {
+  display: none;
+}
+.ppValidatorInvalid {
+  display: block;
+}

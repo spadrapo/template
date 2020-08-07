@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<script src="/drapo.js"></script>
+<div d-sector-parent-url="~/app/shared/layout.html" d-sector-parent="menu">
+    <div>
+        <!--Layout-->
+        <div class="dMenu">
+            <div d-for="item in menuItems">
+                <div style="float:left" class="dMenuTab">
+                    <span d-for="level in (1..{{item._Level}})"></span>
+                </div>
+                <span d-class="{dMenuGroupNone:!{{item.IsExpandable}},dMenuGroupExpanded:{{item.IsExpandable}}&&{{item.IsExpanded}},dMenuGroupCollapsed:{{item.IsExpandable}}&&!{{item.IsExpanded}}}"></span>
+                <span d-model="{{item.Name}}" d-on-click="{{item.Action}}" d-propagation-click="false"></span>
+                <div d-for="item in item.Items" d-if="{{item.IsExpanded}}"></div>
+            </div>
+        </div>
+    </div>
+</div>
