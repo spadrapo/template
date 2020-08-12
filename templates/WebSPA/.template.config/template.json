@@ -1,0 +1,12 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Sysphera",
+    "classifications": [ "Web", "ASP.NET" ],
+    "identity": "WebSAP.Drapo",
+    "name": "WebSPA Drapo",
+    "shortName": "drapo",
+    "tags": {
+      "language": "C#",
+      "type": "project"
+    }
+  }
