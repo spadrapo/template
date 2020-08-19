@@ -22,7 +22,7 @@ stages:
         packagesToPack: '**/*pack.csproj'
         versioningScheme: 'byPrereleaseNumber'
         majorVersion: '1'
-        minorVersion: '0'
+        minorVersion: '1'
         patchVersion: '0'
     - task: NuGetCommand@2
       displayName: 'NuGet push nuget'
