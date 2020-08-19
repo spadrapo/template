@@ -1,0 +1,22 @@
+trigger:
+- master
+
+resources:
+- repo: self
+
+variables:
+  tag: '$(Build.BuildId)'
+
+stages:
+- stage: Build
+  displayName: Build
+  pool: Azure
+  jobs:  
+  - job: Pack
+    displayName: Pack
+    steps:
+    - task: DotNetCoreCLI@2
+      inputs:
+        command: 'pack'
+        packagesToPack: '**/*pack.csproj'
+        versioningScheme: 'off'
