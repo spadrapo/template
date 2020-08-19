@@ -16,10 +16,14 @@ stages:
     displayName: Pack
     steps:
     - task: DotNetCoreCLI@2
+      displayName: Dotnet Pack
       inputs:
         command: 'pack'
         packagesToPack: '**/*pack.csproj'
-        versioningScheme: 'off'
+        versioningScheme: 'byPrereleaseNumber'
+        majorVersion: '1'
+        minorVersion: '0'
+        patchVersion: '0'
     - task: NuGetCommand@2
       displayName: 'NuGet push nuget'
       inputs:
