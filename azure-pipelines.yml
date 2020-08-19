@@ -20,3 +20,10 @@ stages:
         command: 'pack'
         packagesToPack: '**/*pack.csproj'
         versioningScheme: 'off'
+    - task: NuGetCommand@2
+      displayName: 'NuGet push nuget'
+      inputs:
+        command: push
+        packagesToPush: '$(Build.ArtifactStagingDirectory)/*.nupkg'
+        nuGetFeedType: external
+        publishFeedCredentials: nuget
