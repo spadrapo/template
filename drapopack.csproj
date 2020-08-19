@@ -1,10 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <PackageType>Template</PackageType>
     <PackageVersion>1.0</PackageVersion>
-    <PackageId>Drapo.Utility.Templates</PackageId>
+    <PackageId>spadrapo</PackageId>
     <Title>Drapo Templates</Title>
     <Authors>Sysphera</Authors>
     <Description>Templates to use when creating an application for Drapo.</Description>
@@ -12,11 +11,10 @@
     <IncludeContentInPack>true</IncludeContentInPack>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <ContentTargetFolders>content</ContentTargetFolders>
+    <tags>Drapo Framework SPA</tags>
   </PropertyGroup>
-
   <ItemGroup>
     <Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**" />
     <Compile Remove="**\*" />
   </ItemGroup>
-
 </Project>
