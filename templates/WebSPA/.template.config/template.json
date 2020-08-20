@@ -1,6 +1,6 @@
 {
     "$schema": "http://json.schemastore.org/template",
-    "author": "Sysphera",
+    "author": "Alex Tochetto",
     "classifications": [ "Web", "ASP.NET" ],
     "identity": "WebSAP.Drapo",
     "name": "WebSPA Drapo",
