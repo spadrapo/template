@@ -8,6 +8,7 @@
     <Authors>Thiago Henrique da Silva, Alex Tochetto</Authors>
     <Company>Sysphera</Company>
     <Description>Templates to use when creating an application for Drapo.</Description>
+    <RepositoryUrl>https://github.com/spadrapo/template</RepositoryUrl>
     <PackageTags>dotnet-new;templates;drapo</PackageTags>
     <IncludeContentInPack>true</IncludeContentInPack>
     <IncludeBuildOutput>false</IncludeBuildOutput>
