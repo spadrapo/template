@@ -1,6 +1,8 @@
 trigger:
 - master
 
+name: $(Year:yyyy).$(Month).$(DayOfMonth)$(Rev:.r)
+
 resources:
 - repo: self
 
@@ -20,10 +22,7 @@ stages:
       inputs:
         command: 'pack'
         packagesToPack: '**/*pack.csproj'
-        versioningScheme: 'byPrereleaseNumber'
-        majorVersion: '1'
-        minorVersion: '1'
-        patchVersion: '0'
+        versioningScheme: byBuildNumber
     - task: NuGetCommand@2
       displayName: 'NuGet push nuget'
       inputs:
