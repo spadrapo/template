@@ -1,25 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
-using Newtonsoft.Json.Serialization;
-using Swashbuckle.AspNetCore.Swagger;
-using Sysphera.Middleware.Drapo;
-using Microsoft.Net.Http.Headers;
-using System.IO;
-using Microsoft.OpenApi.Models;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Net.Http.Headers;
+using Microsoft.OpenApi.Models;
+using Sysphera.Middleware.Drapo;
 using Sysphera.Middleware.Drapo.Pipe;
+using System.IO;
 
-namespace WebDocs
+namespace WebSPA
 {
     public class Startup
     {
-        DrapoMiddlewareOptions _options = null;
+        private DrapoMiddlewareOptions _options = null;
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddHttpContextAccessor();
