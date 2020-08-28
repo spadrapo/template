@@ -1,6 +1,4 @@
 ﻿/// <binding BeforeBuild='beforeBuild' />
-//"use strict";
-
 var gulp = require('gulp'),
     gulp_concat = require('gulp-concat'),
     gulp_rename = require('gulp-rename'),
@@ -14,6 +12,13 @@ gulp.task("less", function () {
         .pipe(gulp.dest('./wwwroot/css'));
 });
 
+gulp.task('bootstrap', function () {
+    gulp.src('node_modules/bootstrap/dist/js/bootstrap.min.js')
+        .pipe(gulp.dest('wwwroot/js'))
+    gulp.src('node_modules/bootstrap/dist/css/bootstrap.min.css')
+        .pipe(gulp.dest('wwwroot/css'))
+})
+
 gulp.task('publish', ['less']);
 
 gulp.task('watch:less', function () {
@@ -24,4 +29,4 @@ gulp.task('beforeBuild', ['publish']);
 
 gulp.task('watch', ['watch:less']);
 
-gulp.task('default', ['watch']);
+gulp.task('default', ['watch', 'bootstrap']);
